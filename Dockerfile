@@ -4,4 +4,5 @@ MAINTAINER kiranchakka
 RUN apt-get update
 COPY /var/lib/jenkins/workspace/FirstTask/gameoflife-web/target/gameoflife.war /usr/bin/tomcat/webapps/gameoflife.war
 EXPOSE 8088
-CMD ["ls -ltr /usr/bin/tomcat/webapps/*.war"]
+#CMD ["ls -ltr /usr/bin/tomcat/webapps/*.war"]
+CMD ["catalina.sh", "run"]
